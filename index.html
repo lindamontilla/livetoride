@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="icon" type="image/ico" href="./img/favicon.ico" />
+    <title>LIVE TO RIDE &#9733;</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!-- agregamos la libreria font-awesome-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+  
+  <style type="text/css">
+    
+
+
+  body{
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+
+  header{
+    width: 100%;
+    background: black;
+    position: fixed; /*esto lo que hace es que no me mueve el elemento de la posicion que le he dado*/
+    top: 0;
+    font-family: 'Anton', 'Lucida Console';
+    letter-spacing: 1px;
+  }
+
+ #btn-menu{
+    display: none;
+  }
+  
+  header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid white;
+    z-index: 9999;
+  }
+
+  header label:hover{ /*son las caracteristicas del icono de menu cuando coloco el cursor sobre el*/
+    cursor: pointer;
+    background-color: orange;
+  }
+
+  .menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex; /*esto lo que hace es que coloca la lista en una misma linea*/
+  }
+
+  .menu li{
+    text-align: center;
+    flex-grow: 1; 
+    /* esto lo que hace es expandirme los cuadros de menu al tamano de la ventana cada vez que expando la ventana */
+  }
+
+   .menu li:hover{
+    border-bottom: 6px solid orange;
+    border-top: 1px solid orange;
+
+  }
+
+@media (max-width: 768px){ /*esto lo que hace es que cuando selecciono un link de la lista peque me la sombree en orange*/
+  .menu li:hover {
+    background-color: orange;
+    }
+  }
+
+  
+  .menu li a { /*esto lo que hace es hacer los cuadritos de los hipervinculos*/
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+input[type=email] {
+    width: 230px;
+    padding: 15px 35px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+}
+
+input[type=email]:focus {
+    border: 3px solid orange;
+    width: 300px;
+}
+
+div.copyright{
+      background-color: black;
+      font-family: 'Raleway';
+      color: white;
+      width: 100%;
+      text-align: center;
+      margin-left: 0%;
+      font-size: 85%;
+
+        }     
+
+
+
+/*.col-izq, .col-der{width: 70%}*/
+
+.col-izq{width: 60%; float:left;}
+
+.col-der{width:40%; float: right;}
+
+.racing, .enduro, .rally {width: 100%}
+
+
+.button{
+      font-family: 'Raleway'; border:none; color:white; letter-spacing: 1px; cursor: pointer; padding: 2px 10px; font-size:15px; background: rgb(255,146,84);
+        background: -moz-linear-gradient(top, rgba(255,146,84,1) 22%, rgba(255,118,50,1) 49%, rgba(255,103,15,1) 85%, rgba(255,103,15,1) 85%, rgba(255,103,15,1) 100%);
+       background: -webkit-linear-gradient(top, rgba(255,146,84,1) 22%,rgba(255,118,50,1) 49%,rgba(255,103,15,1) 85%,rgba(255,103,15,1) 85%,rgba(255,103,15,1) 100%);
+        background: linear-gradient(to bottom, rgba(255,146,84,1) 22%,rgba(255,118,50,1) 49%,rgba(255,103,15,1) 85%,rgba(255,103,15,1) 85%,rgba(255,103,15,1) 100%);
+       filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff9254', endColorstr='#ff670f',GradientType=0 );
+     }
+
+
+.button:hover{
+  background: rgb(255,93,0);
+background: -moz-linear-gradient(top, rgba(255,93,0,1) 3%, rgba(255,103,15,1) 3%, rgba(255,103,15,1) 22%, rgba(255,103,15,1) 22%, rgba(255,146,84,1) 71%, rgba(255,150,94,1) 83%);
+background: -webkit-linear-gradient(top, rgba(255,93,0,1) 3%,rgba(255,103,15,1) 3%,rgba(255,103,15,1) 22%,rgba(255,103,15,1) 22%,rgba(255,146,84,1) 71%,rgba(255,150,94,1) 83%);
+background: linear-gradient(to bottom, rgba(255,93,0,1) 3%,rgba(255,103,15,1) 3%,rgba(255,103,15,1) 22%,rgba(255,103,15,1) 22%,rgba(255,146,84,1) 71%,rgba(255,150,94,1) 83%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff5d00', endColorstr='#ff965e',GradientType=0 );
+}
+
+div#readycolor{
+  height: 563px;
+  background-image: url('./img/readytoracecolor.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 1px 0;
+}
+
+
+
+div#readyblack{ 
+  height: 563px;
+  background-image: url('./img/readytoraceblack.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  padding: 1px 0; 
+}
+
+
+div#readycolor:hover div#readyblack{
+  opacity: 1;
+}
+
+
+@media (max-width: 768px){ /*esto lo que hace es que me aparezca el icono de menu cuando encojo la pantalla*/
+    header label{
+      display: block;
+      margin-top: -30px;
+    }
+    
+
+    .menu {
+      position: absolute; /*esto me permite crear un elemento independiente*/
+      background: black;
+      width: 70%;
+      margin-left: -70%; /*esto lo que hace es esconderme a la izquierda el menu*/
+      transition: all 0.5s;
+      
+    }
+
+    .menu ul{
+      flex-direction: column;/*esto lo que hace es hacerme la lista columna*/
+     
+    }
+
+    .menu li{
+      border-top: 1px solid #fff;
+
+    }
+
+    #btn-menu:checked ~ .menu{
+      margin: 0;
+      
+    }
+  }
+ 
+ @media screen and (max-width: 768px) {
+   .col-izq, .col-der{width: 100%;}
+ }
+
+ 
+  </style>
+
+
+  </head>
+  <body>
+     <header>
+        <div>
+        <img src="./img/logo.jpg" style="width: 100%">
+        <!--img src="./img/livetoride.jpg" alt="LIVE TO RIDE" style="float:left"-->
+            <!--p>All about Live to Ride</p-->
+        </div>
+
+
+        <label for="btn-menu"><i class="material-icons" style="font-size:30px;color:white;margin-top: -10px;margin-left: -10px">list</i> <!--<img src="./img/icono_menu.png" width="30px" lenght="30px" alt="MENU">--></label>
+        <input type="checkbox" id="btn-menu">
+  
+         <nav class="menu">
+          <ul>
+             <li><a href="./index.html">HOME</a></li>
+             <li><a href="./racing.html">RACING</a></li>
+             <li><a href="./enduro.html">ENDURO</a></li>
+             <li><a href="./rally.html">RALLY</a></li> 
+             <li><a href="./contact.html">CONTACT</a></li>
+          </ul>
+         </nav>  
+
+
+
+     </header> 
+
+    
+
+        <div>
+          <img src="./img/readytoracecolor.jpg" alt="Ready to Race" title="Are You Ready to Race? Live To Ride" style="width: 100%"">
+   
+        </div> 
+
+         
+
+
+    
+
+
+  <div class="container" >
+          <div class="row text-center">
+            <div class="col-xs-12" style="z-index: -9999">
+              <h2 style="font-family:'Anton', 'Lucida Console'; letter-spacing: 1px; text-align: center">EVERY MILE IS MY <span style="color:orange"> DESTINATION </span>, EVERY FAILURE IS MY <span style="color:orange">MOTIVATION</span>, EVERY ROAD IS MY <span style="color:orange">NATION,</span></h2>
+              <h1 style="font-family:'Anton', 'Lucida Console'; letter-spacing: 1px; text-align: center">I'M A RIDER, I <span style="font-family:'Cabin Sketch';color:black;font-size:135%"> LIVE TO RIDE</span></h1>
+              <h2 style="font-family:'Anton', 'Lucida Console'; letter-spacing: 1px; text-align: center">NOTHING COMES BETWEEN ME AND MY <span style="color:orange">BIKE</span>, I'M A RIDER AND I'LL <span style="color:orange">SURVIVE</span></h2>
+            </div><!--cierre de la columna-->
+         </div>    
+  </div>
+
+<!--
+   <div class="container">
+          <div class="row">
+              <div class="col col-xs-6">
+                 <img class="racing" src="./img/racing.jpg" alt="RACING">
+              </div>
+              
+              <div class="col col-xs-6">   
+                  <img class="enduro" src="./img/enduro.jpg" alt="ENDURO" >
+                  <img class="rally" src="./img/rally.jpg" alt="RALLY">
+              </div>
+          </div>
+    </div> 
+ -->
+<div style="overflow: auto">
+    <div class="col-izq">
+        <a href="./racing.html">
+              <img class="racing" src="./img/racing.jpg" alt="RACING">
+        </a>
+    </div>
+     <div class="col-der">
+        <a href="./enduro.html">
+             <img class="enduro" src="./img/enduro.jpg" alt="ENDURO">
+        </a>
+        <a href="./rally.html">
+             <img class="rally" src="./img/rally.jpg" alt="RALLY" style="margin-top: -5px">
+        </a>
+    </div>
+</div>  
+    
+
+ <footer style="background-color: black; padding-top: 0.5cm; margin-top: -5px; width: 100%";>
+ <div class="container">
+       <div class="row text-center">
+          <div class="col-xs-12 col-sm-6">
+            <div style="background-color: black;color:white;font-family: 'Anton';letter-spacing: 2px">
+                <form style="text-align: center;">      
+                  <label for="email" ;>WANT MORE? GET EMAIL UPDATE</label><br>
+                   <input type="email" id="email" name="email" placeholder="Enter your e-mail address" style="    background-image: url('./img/email.png');background-position: 2px 2px;background-repeat: no-repeat; height: 10px">
+                   <button type="submit" class="button"><b>SUBMIT</b></button>
+            
+     
+                </form>
+            </div>
+          </div>  
+   <!--position: relative; left: 900px; bottom: 60px Para que los iconos de rrss me queden a la derecha-->
+           <div class="col-xs-12 col-sm-6" style="padding-top: 25px">
+                  <a style="color:blue; margin-right: 10px"; href="http://www.facebook.com" target="_blank">
+                              <i class="fa fa-facebook-square fa-3x" ></i>
+                  </a>
+                  <a style="color:lightblue;margin-right: 10px" href="http://wwww.twitter.com" target="_blank">
+                               <i class="fa fa-twitter-square fa-3x"></i>
+                  </a>
+                  <a style="color:orange;margin-right: 10px" href="http://wwww.instagram.com" target="_blank">
+                               <i class="fa fa-instagram fa-3x" aria-hidden="true"></i>
+                  </a>
+                  <a style="color:red;margin-right: 10px" href="http://wwww.youtube.com" target="_blank">
+                               <i class="fa fa-youtube fa-3x" aria-hidden="true"></i>
+                  </a>
+           </div>
+       </div>
+  </div>
+
+    <div class="copyright" style="padding-top: 20px">
+      <img src="./img/starfishlogo.jpg" alt="ST&#9733;FISH" width="150px" >
+      <p>Copyright &copy; 2017 - ST<span style="font-size: 18px">&#9733;</span>RFISH </p>
+    </div> 
+</footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>

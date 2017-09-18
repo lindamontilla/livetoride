@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <title>Live To Ride &#9733;</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+
+  <!-- agregamos la libreria font-awesome-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome/css/font-awesome.min.css">
+  
+  <style type="text/css">
+    
+  div.titulo1{
+    background-color: black;
+    color:yellow;
+    top: 0px;
+    text-align: center;
+    font-family: 'Anton', 'Lucida Console';
+    letter-spacing: 2px;
+  }
+
+  body{
+    margin: 0;
+    font-family: sans-serif;
+  }
+
+
+  header{
+    width: 100%;
+    background: black;
+    position: fixed; /*esto lo que hace es que no me mueve el elemento de la posicion que le he dado*/
+    top: 0;
+    font-family: 'Anton', 'Lucida Console';
+    letter-spacing: 1px;
+  }
+
+ #btn-menu{
+    display: none;
+  }
+  
+  header label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    border-right: 1px solid white;
+  }
+
+  header label:hover{ /*son las caracteristicas del icono de menu cuando coloco el cursor sobre el*/
+    cursor: pointer;
+    background-color: orange;
+  }
+
+  .menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex; /*esto lo que hace es que coloca la lista en una misma linea*/
+  }
+
+  .menu li{
+    text-align: center;
+    flex-grow: 1; 
+    /* esto lo que hace es expandirme los cuadros de menu al tamano de la ventana cada vez que expando la ventana */
+  }
+
+   .menu li:hover{
+    border-bottom: 6px solid orange;
+
+  }
+
+@media (max-width: 768px){ /*esto lo que hace es que cuando selecciono un link de la lista peque me la sombree en orange*/
+  .menu li:hover {
+    background-color: orange;
+    }
+  }
+
+  
+  .menu li a { /*esto lo que hace es hacer los cuadritos de los hipervinculos*/
+    display: block;
+    padding: 15px 20px;
+    color: #fff;
+    text-decoration: none;
+  }
+
+input[type=email] {
+    width: 230px;
+    padding: 15px 35px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 3px solid #ccc;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    outline: none;
+
+}
+
+input[type=email]:focus {
+    border: 3px solid orange;
+    width: 300px;
+}
+
+div.copyright{
+      background-color: black;
+      font-family: 'Raleway';
+      color: white;
+      width: 100%;
+      text-align: center;
+      margin-left: 0%;
+      font-size: 85%;
+        }     
+
+div.buttom:hover{}
+
+/*.col-izq, .col-der{width: 70%}*/
+
+.col-izq{width: 60%; float:left;}
+
+.col-der{width:40%; float: right;}
+
+.racing, .enduro, .rally {width: 100%}
+
+
+
+div#readycolor{
+  height: 563px;
+  background-image: url('./img/readytoracecolor.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 1px 0;
+}
+
+
+
+div#readyblack{ 
+  height: 563px;
+  background-image: url('./img/readytoraceblack.jpg');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  opacity: 0;
+  padding: 1px 0; 
+}
+
+
+div#readycolor:hover div#readyblack{
+  opacity: 1;
+}
+
+
+@media (max-width: 768px){ /*esto lo que hace es que me aparezca el icono de menu cuando encojo la pantalla*/
+    header label{
+      display: block;
+    }
+
+    .menu {
+      position: absolute; /*esto me permite crear un elemento independiente*/
+      background: black;
+      width: 70%;
+      margin-left: -70%; /*esto lo que hace es esconderme a la izquierda el menu*/
+      transition: all 0.5s;
+    }
+
+    .menu ul{
+      flex-direction: column;/*esto lo que hace es hacerme la lista columna*/
+    }
+
+    .menu li{
+      border-top: 1px solid #fff;
+    }
+
+    #btn-menu:checked ~ .menu{
+      margin: 0;
+    }
+  }
+ 
+ @media screen and (max-width: 768px) {
+   .col-izq, .col-der{width: 100%;}
+ }
+
+ 
+  </style>
